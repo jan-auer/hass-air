@@ -1,30 +1,25 @@
 # Air - Apple-inspired theme for Home Assistant.
+
 Air:
 
-  # ─────────────────────────────────────────────────────────────────────
-  # Mode-independent styling.
-  # ─────────────────────────────────────────────────────────────────────
-
   # Typography
-  ha-font-family-body:     '-apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", ui-sans-serif, system-ui, "Inter", "Helvetica Neue", Arial, sans-serif'
-  ha-font-family-heading:  '-apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", ui-sans-serif, system-ui, "Inter", "Helvetica Neue", Arial, sans-serif'
-  ha-font-family-code:     'ui-monospace, "SF Mono", "Menlo", Consolas, monospace'
-  ha-font-family-longform: 'ui-serif, "New York", "Iowan Old Style", Georgia, serif'
+  ha-font-family-body:     "system-ui, sans-serif"
+  ha-font-family-heading:  "var(--ha-font-family-body)"
+  ha-font-family-code:     "ui-monospace, monospace"
+  ha-font-family-longform: "ui-serif, serif"
 
   ha-line-height-condensed: "1.2"
   ha-line-height-normal:    "1.41"
   ha-line-height-expanded:  "1.6"
 
   # Border radius
-  ha-border-radius-sm:     "8px"
-  ha-border-radius-md:     "12px"
-  ha-border-radius-lg:     "16px"
-  ha-border-radius-xl:     "20px"
-  ha-border-radius-2xl:    "24px"
-  ha-border-radius-3xl:    "28px"
-  ha-border-radius-4xl:    "36px"
-  ha-border-radius-pill:   "9999px"
-  ha-border-radius-circle: "50%"
+  ha-border-radius-sm:  "8px"
+  ha-border-radius-md:  "12px"
+  ha-border-radius-lg:  "16px"
+  ha-border-radius-xl:  "20px"
+  ha-border-radius-2xl: "24px"
+  ha-border-radius-3xl: "28px"
+  ha-border-radius-4xl: "36px"
 
   # Animation
   ha-animation-duration-instant: "100ms"
@@ -32,49 +27,48 @@ Air:
   ha-animation-duration-normal:  "350ms"
   ha-animation-duration-slow:    "500ms"
 
-  # MDC shape tokens
-  mdc-shape-small:  "12px"
-  mdc-shape-medium: "16px"
-  # mdc-shape-large intentionally omitted: it rounds the sidebar
-
-  # ─────────────────────────────────────────────────────────────────────
-  # Element-specific overrides for targeted styling.
-  # ─────────────────────────────────────────────────────────────────────
-
-  # Overlay Materials
-  app-header-backdrop-filter:        "blur(30px) saturate(180%)"
-  ha-dialog-surface-backdrop-filter: "blur(24px) saturate(150%)"
-
   # Cards
-  ha-card-border-radius:   "20px"
-  ha-card-border-width:    "0"
-  ha-card-backdrop-filter: "none"
+  ha-card-border-radius: "20px"
+  ha-card-border-width:  "0"
 
   # Heading card
   ha-heading-card-title-font-weight: 600
   ha-heading-card-title-color: "rgba(var(--rgb-secondary-text-color), 0.75)"
 
-  # Switch (HA 2026.5+)
-  rgb-switch-thumb-color:                         "255, 255, 255"
-  ha-switch-background-color:                     "rgba(var(--rgb-state-inactive-color), 0.32)"
-  ha-switch-border-color:                         "var(--ha-switch-background-color)"
-  ha-switch-checked-background-color:             "var(--accent-color)"
-  ha-switch-checked-border-color:                 "var(--ha-switch-checked-background-color)"
-  ha-switch-thumb-background-color:               "rgba(var(--rgb-switch-thumb-color), 0.70)"
-  ha-switch-thumb-background-color-hover:         "rgb(var(--rgb-switch-thumb-color))"
+  # Switches (HA 2026.5+)
+  ha-switch-background-color:         "rgba(142, 142, 147, 0.32)"
+  ha-switch-border-color:             "var(--ha-switch-background-color)"
+  ha-switch-checked-background-color: "var(--accent-color)"
+  ha-switch-checked-border-color:     "var(--ha-switch-checked-background-color)"
+
+  ha-switch-thumb-background-color:               "rgba(255, 255, 255, 0.70)"
+  ha-switch-thumb-background-color-hover:         "#FFFFFF"
   ha-switch-thumb-border-color:                   "var(--ha-switch-thumb-background-color)"
   ha-switch-thumb-border-color-hover:             "var(--ha-switch-thumb-background-color-hover)"
-  ha-switch-checked-thumb-background-color:       "rgba(var(--rgb-switch-thumb-color), 0.90)"
+  ha-switch-checked-thumb-background-color:       "rgba(255, 255, 255, 0.90)"
   ha-switch-checked-thumb-background-color-hover: "var(--ha-switch-thumb-background-color-hover)"
   ha-switch-checked-thumb-border-color:           "var(--ha-switch-checked-thumb-background-color)"
   ha-switch-checked-thumb-border-color-hover:     "var(--ha-switch-thumb-background-color-hover)"
 
+  # Sliders
+  ha-slider-thumb-color: "#FFFFFF"
+  ha-slider-indicator-color: "var(--accent-color)"
+
   modes:
 
-    # ─────────────────────────────────────────────────────────────────────
-    # LIGHT - soft pastel mesh, near-white glass, iOS systemBlue accent.
-    # ─────────────────────────────────────────────────────────────────────
     light:
+
+      # Built-in color codes
+      rgb-primary-color:            "255, 149, 0"
+      rgb-accent-color:             "0, 122, 255"
+      rgb-primary-text-color:       "0, 0, 0"
+      rgb-secondary-text-color:     "60, 60, 67"
+      rgb-text-primary-color:       "255, 255, 255"
+      rgb-card-background-color:    "255, 255, 255"
+      rgb-warning-color:            "255, 149, 0"
+      rgb-error-color:              "255, 59, 48"
+      rgb-success-color:            "52, 199, 89"
+      rgb-info-color:               "0, 122, 255"
 
       # Brand
       primary-color:        "#FF9500"
@@ -82,21 +76,6 @@ Air:
       darker-primary-color: "#995900"
       light-primary-color:  "#FFD9B3"
       accent-color:         "#007AFF"
-      app-theme-color:      "#f4f5f8"
-
-      rgb-primary-color:            "255, 149, 0"
-      rgb-accent-color:             "0, 122, 255"
-      rgb-primary-text-color:       "0, 0, 0"
-      rgb-secondary-text-color:     "60, 60, 67"
-      rgb-text-primary-color:       "255, 255, 255"
-      rgb-card-background-color:    "255, 255, 255"
-      rgb-primary-background-color: "244, 245, 248"
-      rgb-state-active-color:       "255, 149, 0"
-      rgb-state-inactive-color:     "142, 142, 147"
-      rgb-warning-color:            "255, 149, 0"
-      rgb-error-color:              "255, 59, 48"
-      rgb-success-color:            "52, 199, 89"
-      rgb-info-color:               "0, 122, 255"
 
       # Backgrounds
       lovelace-background: >-
@@ -115,33 +94,36 @@ Air:
           rgba(228, 212, 226, 0.50), transparent 75%),
         linear-gradient(180deg, #F2F2F7 0%, #ECECF1 100%)
 
-      primary-background-color:   "#f4f5f8"
-      secondary-background-color: "#eceef3"
-      clear-background-color:     "#ffffff"
+      primary-background-color:   "#F4F5F8"
+      secondary-background-color: "#ECEEF3"
+      clear-background-color:     "#FFFFFF"
 
       # Cards
-      ha-card-background:   "rgba(255, 255, 255, 0.48)"
-      ha-card-border-color: "rgba(60, 60, 67, 0.10)"
+      card-background-color: "#F4F5F8"
+      ha-card-background:    "rgba(255, 255, 255, 0.48)"
+      ha-card-border-color:  "rgba(60, 60, 67, 0.10)"
       ha-card-box-shadow: >-
         inset 0 1px 0 0 rgba(255, 255, 255, 0.40),
         0 1px 3px rgba(0, 0, 0, 0.06),
         0 8px 24px rgba(0, 0, 0, 0.05)
 
       # Dialogs
-      ha-dialog-surface-background: "rgba(255, 255, 255, 0.78)"
-      mdc-dialog-scrim-color:       "rgba(0, 0, 0, 0.30)"
+      ha-dialog-surface-backdrop-filter: "blur(12px) saturate(150%)"
+      ha-dialog-surface-background:      "rgba(255, 255, 255, 0.7)"
+      mdc-dialog-scrim-color:            "rgba(0, 0, 0, 0.30)"
       dialog-box-shadow: >-
+        inset 0 0 0 1px rgba(60, 60, 67, 0.5),
         0 8px 24px rgba(0, 0, 0, 0.18),
         0 24px 64px rgba(0, 0, 0, 0.20)
 
       # Text
-      primary-text-color:       "rgba(0, 0, 0, 1)"
+      primary-text-color:       "#000000"
       secondary-text-color:     "rgba(60, 60, 67, 0.6)"
       text-primary-color:       "#FFFFFF"
-      text-light-primary-color: "rgba(0, 0, 0, 1)"
+      text-light-primary-color: "#000000"
       disabled-text-color:      "rgba(60, 60, 67, 0.3)"
 
-      ha-color-text-primary:   "rgba(0, 0, 0, 1)"
+      ha-color-text-primary:   "#000000"
       ha-color-text-secondary: "rgba(60, 60, 67, 0.6)"
       ha-color-text-disabled:  "rgba(60, 60, 67, 0.3)"
       ha-color-text-link:      "#007AFF"
@@ -153,22 +135,22 @@ Air:
       shadow-color:        "rgba(0, 0, 0, 0.10)"
 
       # App header
-      app-header-background-color:      "rgba(255, 255, 255, 0.72)"
-      app-header-text-color:            "rgba(0, 0, 0, 1)"
+      app-theme-color:             "#F4F5F8"
+      app-header-backdrop-filter:   "blur(30px) saturate(180%)"
+      app-header-background-color: "rgba(255, 255, 255, 0.72)"
+      app-header-text-color:       "#000000"
+      app-header-border-bottom:    "1px solid rgba(60, 60, 67, 0.18)"
       app-header-edit-background-color: "rgba(255, 255, 255, 0.92)"
-      app-header-edit-text-color:       "rgba(0, 0, 0, 1)"
-      app-header-border-bottom:         "1px solid rgba(60, 60, 67, 0.18)"
+      app-header-edit-text-color:       "#000000"
 
       # Sidebar
-      sidebar-background-color:          "#f4f5f8"
+      sidebar-background-color:          "#F4F5F8"
       sidebar-text-color:                "rgba(0, 0, 0, 0.88)"
-      sidebar-icon-color:                "#5a5e72"
-      sidebar-selected-background-color: "rgba(255, 149, 0, 0.14)"
+      sidebar-icon-color:                "#5A5E72"
       sidebar-selected-text-color:       "#FF9500"
       sidebar-selected-icon-color:       "#FF9500"
 
       # Inputs
-      input-background-color:               "rgba(118, 118, 128, 0.12)"
       input-fill-color:                     "rgba(118, 118, 128, 0.12)"
       input-disabled-fill-color:            "rgba(118, 118, 128, 0.06)"
       input-idle-line-color:                "rgba(60, 60, 67, 0.29)"
@@ -177,7 +159,7 @@ Air:
       input-outlined-idle-border-color:     "rgba(60, 60, 67, 0.29)"
       input-outlined-hover-border-color:    "rgba(255, 149, 0, 0.50)"
       input-outlined-disabled-border-color: "rgba(60, 60, 67, 0.10)"
-      input-ink-color:                      "rgba(0, 0, 0, 1)"
+      input-ink-color:                      "#000000"
       input-label-ink-color:                "rgba(60, 60, 67, 0.6)"
       input-disabled-ink-color:             "rgba(60, 60, 67, 0.3)"
       input-dropdown-icon-color:            "rgba(60, 60, 67, 0.54)"
@@ -192,20 +174,9 @@ Air:
       state-active-color:        "#FF9500"
       state-switch-active-color: "#34C759"
 
-      # Sliders
-      slider-color:           "#FF9500"
-      slider-secondary-color: "rgba(255, 149, 0, 0.35)"
-      slider-track-color:     "rgba(120, 120, 128, 0.20)"
-      slider-bar-color:       "rgba(120, 120, 128, 0.20)"
-      ha-slider-color:        "#FF9500"
-
-      # Toggle buttons
-      toggle-button-color:           "#FF9500"
-      toggle-button-unchecked-color: "rgba(60, 60, 67, 0.4)"
-
       # Label badges
       label-badge-background-color: "rgba(255, 255, 255, 0.78)"
-      label-badge-text-color:       "rgba(0, 0, 0, 1)"
+      label-badge-text-color:       "#000000"
       label-badge-red:              "#FF3B30"
       label-badge-blue:             "#007AFF"
       label-badge-green:            "#34C759"
@@ -214,16 +185,6 @@ Air:
 
       # Chips
       chip-background-color: "rgba(120, 120, 128, 0.16)"
-
-      # Energy
-      energy-grid-consumption-color: "#007AFF"
-      energy-grid-return-color:      "#AF52DE"
-      energy-solar-color:            "#FF9500"
-      energy-non-fossil-color:       "#34C759"
-      energy-battery-out-color:      "#00C7BE"
-      energy-battery-in-color:       "#FF2D55"
-      energy-gas-color:              "#FF3B30"
-      energy-water-color:            "#32ADE6"
 
       # Scrollbar
       scrollbar-thumb-color: "rgba(60, 60, 67, 0.30)"
@@ -234,41 +195,34 @@ Air:
       mdc-theme-surface:               "rgba(255, 255, 255, 0.72)"
       mdc-theme-on-primary:            "#FFFFFF"
       mdc-theme-on-secondary:          "#FFFFFF"
-      mdc-theme-on-surface:            "rgba(0, 0, 0, 1)"
+      mdc-theme-on-surface:            "#000000"
       mdc-text-field-fill-color:       "rgba(118, 118, 128, 0.12)"
-      mdc-text-field-ink-color:        "rgba(0, 0, 0, 1)"
+      mdc-text-field-ink-color:        "#000000"
       mdc-text-field-label-ink-color:  "rgba(60, 60, 67, 0.6)"
       mdc-text-field-idle-line-color:  "rgba(60, 60, 67, 0.29)"
       mdc-text-field-hover-line-color: "rgba(255, 149, 0, 0.50)"
       mdc-checkbox-unchecked-color:    "rgba(60, 60, 67, 0.50)"
       mdc-radio-unchecked-color:       "rgba(60, 60, 67, 0.50)"
 
-
-    # ─────────────────────────────────────────────────────────────────────
-    # DARK - deep navy/violet mesh, dark-glass cards, iOS systemBlue accent.
-    # ─────────────────────────────────────────────────────────────────────
     dark:
 
-      # Brand
-      primary-color:        "#ff8a3d"
-      dark-primary-color:   "#e87325"
-      light-primary-color:  "#ffb380"
-      accent-color:         "#0A84FF"
-      app-theme-color:      "#0e0f14"
-
+      # Built-in color codes
       rgb-primary-color:            "255, 138, 61"
       rgb-accent-color:             "10, 132, 255"
       rgb-primary-text-color:       "255, 255, 255"
       rgb-secondary-text-color:     "235, 235, 245"
       rgb-text-primary-color:       "255, 255, 255"
       rgb-card-background-color:    "22, 21, 28"
-      rgb-primary-background-color: "14, 15, 20"
-      rgb-state-active-color:       "255, 138, 61"
-      rgb-state-inactive-color:     "142, 142, 147"
       rgb-warning-color:            "255, 159, 10"
       rgb-error-color:              "255, 69, 58"
       rgb-success-color:            "48, 209, 88"
       rgb-info-color:               "10, 132, 255"
+
+      # Brand
+      primary-color:        "#FF8A3D"
+      dark-primary-color:   "#E87325"
+      light-primary-color:  "#FFB380"
+      accent-color:         "#0A84FF"
 
       # Backgrounds
       lovelace-background: >-
@@ -282,11 +236,12 @@ Air:
           rgba(255, 138, 61, 0.13), transparent 80%),
         linear-gradient(160deg, #0e0f14 0%, #16131c 100%)
 
-      primary-background-color:   "#0e0f14"
-      secondary-background-color: "#13141a"
-      clear-background-color:     "#16131c"
+      primary-background-color:   "#0E0F14"
+      secondary-background-color: "#13141A"
+      clear-background-color:     "#16131C"
 
       # Cards
+      card-background-color: "#13141A"
       ha-card-background:   "rgba(22, 21, 28, 0.55)"
       ha-card-border-color: "rgba(255, 255, 255, 0.07)"
       ha-card-box-shadow: >-
@@ -295,20 +250,22 @@ Air:
         0 12px 32px rgba(0, 0, 0, 0.45)
 
       # Dialogs
-      ha-dialog-surface-background: "rgba(40, 40, 45, 0.78)"
-      mdc-dialog-scrim-color:       "rgba(0, 0, 0, 0.55)"
+      ha-dialog-surface-backdrop-filter: "blur(24px) saturate(150%)"
+      ha-dialog-surface-background:      "rgba(40, 40, 45, 0.2)"
+      mdc-dialog-scrim-color:            "rgba(0, 0, 0, 0.3)"
       dialog-box-shadow: >-
+        inset 0 0 0 1px rgba(60, 60, 67, 0.5),
         0 8px 24px rgba(0, 0, 0, 0.5),
         0 24px 64px rgba(0, 0, 0, 0.6)
 
       # Text
-      primary-text-color:       "rgba(255, 255, 255, 1)"
+      primary-text-color:       "#FFFFFF"
       secondary-text-color:     "rgba(235, 235, 245, 0.6)"
       text-primary-color:       "#FFFFFF"
-      text-light-primary-color: "rgba(255, 255, 255, 1)"
+      text-light-primary-color: "#FFFFFF"
       disabled-text-color:      "rgba(235, 235, 245, 0.3)"
 
-      ha-color-text-primary:   "rgba(255, 255, 255, 1)"
+      ha-color-text-primary:   "#FFFFFF"
       ha-color-text-secondary: "rgba(235, 235, 245, 0.6)"
       ha-color-text-disabled:  "rgba(235, 235, 245, 0.3)"
       ha-color-text-link:      "#0A84FF"
@@ -320,22 +277,22 @@ Air:
       shadow-color:        "rgba(0, 0, 0, 0.50)"
 
       # App header
-      app-header-background-color:      "rgba(22, 21, 28, 0.72)"
-      app-header-text-color:            "#ececf1"
+      app-theme-color:             "#0E0F14"
+      app-header-backdrop-filter:  "blur(30px) saturate(180%)"
+      app-header-background-color: "rgba(22, 21, 28, 0.72)"
+      app-header-text-color:       "#ECECF1"
+      app-header-border-bottom:    "1px solid rgba(84, 84, 88, 0.45)"
       app-header-edit-background-color: "rgba(22, 21, 28, 0.92)"
-      app-header-edit-text-color:       "#ececf1"
-      app-header-border-bottom:         "1px solid rgba(84, 84, 88, 0.45)"
+      app-header-edit-text-color:       "#ECECF1"
 
       # Sidebar
-      sidebar-background-color:          "#13141a"
-      sidebar-text-color:                "#ececf1"
-      sidebar-icon-color:                "#a4a7b8"
-      sidebar-selected-background-color: "rgba(255, 138, 61, 0.18)"
-      sidebar-selected-text-color:       "#ff8a3d"
-      sidebar-selected-icon-color:       "#ff8a3d"
+      sidebar-background-color:          "#13141A"
+      sidebar-text-color:                "#ECECF1"
+      sidebar-icon-color:                "#A4A7B8"
+      sidebar-selected-text-color:       "#FF8A3D"
+      sidebar-selected-icon-color:       "#FF8A3D"
 
       # Inputs
-      input-background-color:               "rgba(120, 120, 128, 0.24)"
       input-fill-color:                     "rgba(120, 120, 128, 0.24)"
       input-disabled-fill-color:            "rgba(120, 120, 128, 0.12)"
       input-idle-line-color:                "rgba(84, 84, 88, 0.6)"
@@ -344,7 +301,7 @@ Air:
       input-outlined-idle-border-color:     "rgba(84, 84, 88, 0.6)"
       input-outlined-hover-border-color:    "rgba(255, 138, 61, 0.55)"
       input-outlined-disabled-border-color: "rgba(84, 84, 88, 0.2)"
-      input-ink-color:                      "rgba(255, 255, 255, 1)"
+      input-ink-color:                      "#FFFFFF"
       input-label-ink-color:                "rgba(235, 235, 245, 0.6)"
       input-disabled-ink-color:             "rgba(235, 235, 245, 0.3)"
       input-dropdown-icon-color:            "rgba(235, 235, 245, 0.54)"
@@ -356,28 +313,12 @@ Air:
       info-color:    "#0A84FF"
 
       # State colors
-      state-active-color:        "#ff8a3d"
+      state-active-color:        "#FF8A3D"
       state-switch-active-color: "#30D158"
-
-      # Sliders
-      slider-color:           "#ff8a3d"
-      slider-secondary-color: "rgba(255, 138, 61, 0.40)"
-      slider-track-color:     "rgba(120, 120, 128, 0.36)"
-      slider-bar-color:       "rgba(120, 120, 128, 0.36)"
-      ha-slider-color:        "#ff8a3d"
-
-      # Switches & toggles
-      switch-checked-color:           "#30D158"
-      switch-checked-button-color:    "#FFFFFF"
-      switch-checked-track-color:     "#30D158"
-      switch-unchecked-button-color:  "#FFFFFF"
-      switch-unchecked-track-color:   "rgba(120, 120, 128, 0.32)"
-      toggle-button-color:            "#ff8a3d"
-      toggle-button-unchecked-color:  "rgba(235, 235, 245, 0.4)"
 
       # Label badges
       label-badge-background-color: "rgba(40, 40, 45, 0.78)"
-      label-badge-text-color:       "rgba(255, 255, 255, 1)"
+      label-badge-text-color:       "#FFFFFF"
       label-badge-red:              "#FF453A"
       label-badge-blue:             "#0A84FF"
       label-badge-green:            "#30D158"
@@ -387,28 +328,18 @@ Air:
       # Chips
       chip-background-color: "rgba(120, 120, 128, 0.36)"
 
-      # Energy
-      energy-grid-consumption-color: "#0A84FF"
-      energy-grid-return-color:      "#BF5AF2"
-      energy-solar-color:            "#FF9F0A"
-      energy-non-fossil-color:       "#30D158"
-      energy-battery-out-color:      "#66D4CF"
-      energy-battery-in-color:       "#FF375F"
-      energy-gas-color:              "#FF453A"
-      energy-water-color:            "#64D2FF"
-
       # Scrollbar
       scrollbar-thumb-color: "rgba(235, 235, 245, 0.25)"
 
       # MDC passthroughs
-      mdc-theme-primary:               "#ff8a3d"
+      mdc-theme-primary:               "#FF8A3D"
       mdc-theme-secondary:             "#0A84FF"
       mdc-theme-surface:               "rgba(40, 40, 45, 0.72)"
       mdc-theme-on-primary:            "#000000"
       mdc-theme-on-secondary:          "#FFFFFF"
-      mdc-theme-on-surface:            "rgba(255, 255, 255, 1)"
+      mdc-theme-on-surface:            "#FFFFFF"
       mdc-text-field-fill-color:       "rgba(120, 120, 128, 0.24)"
-      mdc-text-field-ink-color:        "rgba(255, 255, 255, 1)"
+      mdc-text-field-ink-color:        "#FFFFFF"
       mdc-text-field-label-ink-color:  "rgba(235, 235, 245, 0.6)"
       mdc-text-field-idle-line-color:  "rgba(84, 84, 88, 0.6)"
       mdc-text-field-hover-line-color: "rgba(255, 138, 61, 0.55)"
