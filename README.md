@@ -46,6 +46,12 @@ data:
 
 Home Assistant saves this setting and restores it on restart. Individual users can still override it from their own profile.
 
+## Known Issues
+
+### Dropdown menus in HACS dialogs
+
+Some dropdown menus inside HACS dialogs may appear mispositioned when opened. This is a limitation of Air's card-mod-free approach and cannot be fixed with pure theme variables. As a workaround, switch to another theme when adding repositories or manually updating.
+
 ## Inspiration
 
 Design tokens derived from Apple's iOS 26 Human Interface Guidelines and UIKit material specs.
