@@ -2,9 +2,9 @@
 
 An Apple-inspired theme for Home Assistant, translated directly from the iOS 26 / iPadOS 26 design language into native HA CSS variables. No card-mod, no custom plugins — everything runs on pure theme YAML.
 
-<img width="1119" height="1035" alt="Light Mode" src="https://github.com/user-attachments/assets/8ac4d934-bec2-40aa-bc4e-33aa47a7b4af" />
+<img width="49%" alt="Light Mode" src="https://github.com/user-attachments/assets/8ac4d934-bec2-40aa-bc4e-33aa47a7b4af" />
 
-<img width="1117" height="1038" alt="Dark Mode" src="https://github.com/user-attachments/assets/67fbbe4c-c3ed-426b-928b-7f7ac0842fb9" />
+<img width="49%" alt="Dark Mode" src="https://github.com/user-attachments/assets/67fbbe4c-c3ed-426b-928b-7f7ac0842fb9" />
 
 ## Features
 
