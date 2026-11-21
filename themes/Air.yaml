@@ -78,6 +78,8 @@ Air:
       accent-color:         "#007AFF"
 
       # Backgrounds
+      # The trailing "fixed" makes HA pin the view background to the viewport
+      # (it switches hui-view-background to position: fixed; works on iOS).
       lovelace-background: >-
         url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'
         viewBox='0 0 256 256'><filter id='n'><feTurbulence baseFrequency='0.85'
@@ -92,7 +94,7 @@ Air:
           rgba(223, 243, 252, 0.85), transparent 75%),
         radial-gradient(ellipse 60% 55% at 5% 90%,
           rgba(228, 212, 226, 0.50), transparent 75%),
-        linear-gradient(180deg, #F2F2F7 0%, #ECECF1 100%)
+        linear-gradient(180deg, #F2F2F7 0%, #ECECF1 100%) fixed
 
       primary-background-color:   "#F4F5F8"
       secondary-background-color: "#ECEEF3"
@@ -234,7 +236,7 @@ Air:
           rgba(82, 44, 30, 0.70), transparent 78%),
         radial-gradient(ellipse 42% 35% at 96% 96%,
           rgba(255, 138, 61, 0.13), transparent 80%),
-        linear-gradient(160deg, #0e0f14 0%, #16131c 100%)
+        linear-gradient(160deg, #0e0f14 0%, #16131c 100%) fixed
 
       primary-background-color:   "#0E0F14"
       secondary-background-color: "#13141A"
