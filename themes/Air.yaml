@@ -54,6 +54,14 @@ Air:
   ha-slider-thumb-color: "#FFFFFF"
   ha-slider-indicator-color: "var(--accent-color)"
 
+  # Bubble Card pop-ups: same surface, scrim, edge and radius as HA's own dialogs (values per mode come from the dialog variables)
+  bubble-pop-up-main-background-color: "var(--ha-dialog-surface-background)"
+  bubble-pop-up-border-radius:         "var(--ha-border-radius-3xl)"
+  bubble-pop-up-border:                "1px solid rgba(60, 60, 67, 0.5)"
+  bubble-pop-up-close-button-border:   "none"
+  bubble-backdrop-background-color:    "var(--mdc-dialog-scrim-color)"
+  bubble-backdrop-filter:              "var(--ha-dialog-scrim-backdrop-filter)"
+
   modes:
 
     light:
