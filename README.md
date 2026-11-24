@@ -2,9 +2,9 @@
 
 An Apple-inspired theme for Home Assistant, translated directly from the iOS 26 / iPadOS 26 design language into native HA CSS variables. No card-mod, no custom plugins — everything runs on pure theme YAML.
 
-<img width="49%" alt="Light Mode" src="https://github.com/user-attachments/assets/8ac4d934-bec2-40aa-bc4e-33aa47a7b4af" />
+<img width="49%" alt="Light Mode" src="https://raw.githubusercontent.com/jan-auer/hass-air/master/images/air-light.png" />
 
-<img width="49%" alt="Dark Mode" src="https://github.com/user-attachments/assets/67fbbe4c-c3ed-426b-928b-7f7ac0842fb9" />
+<img width="49%" alt="Dark Mode" src="https://raw.githubusercontent.com/jan-auer/hass-air/master/images/air-dark.png" />
 
 ## Features
 
@@ -13,6 +13,7 @@ An Apple-inspired theme for Home Assistant, translated directly from the iOS 26 
 - iOS system tints across brand, state, weather, energy, and badge roles
 - SF Pro on Apple devices; Inter / system-ui everywhere else
 - Continuous-corner radius scale
+- Bubble Card pop-ups styled like Home Assistant's dialogs
 
 ## Installation
 
@@ -45,6 +46,14 @@ data:
 ```
 
 Home Assistant saves this setting and restores it on restart. Individual users can still override it from their own profile.
+
+## Bubble Card
+
+Air styles Bubble Card pop-ups like Home Assistant's own dialogs. Bubble Card draws the pop-up shadow itself, so the theme can't set it. To match the dialog shadow too, add this to a pop-up's `styles`:
+
+```css
+.bubble-pop-up.is-popup-opened { box-shadow: var(--dialog-box-shadow) !important; }
+```
 
 ## Known Issues
 
